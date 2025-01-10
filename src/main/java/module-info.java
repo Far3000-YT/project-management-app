@@ -1,7 +1,7 @@
-module final {
+module base {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens final to javafx.fxml;
-    exports final;
+    opens base to javafx.fxml;
+    exports base;
 }
