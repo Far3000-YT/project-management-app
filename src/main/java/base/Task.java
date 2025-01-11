@@ -7,14 +7,13 @@ import java.util.List;
 
 public class Task {
     private int id;
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
     private Priority priority;
     private Date dueDate;
-    private Status status;
+    private Status status; //need to define status enum here
     private Employee assignee;
     private List<String> comments;
-
 
     public Task(int id, String name, String description, Priority priority, Date dueDate, Status status, Employee assignee) {
         this.id = id;

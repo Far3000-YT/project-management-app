@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Company {
-
-    private final String name;
+    private String name;
     private final List<Employee> employees;
     private final List<Project> projects;
-
 
     public Company(String name) {
         this.name = name;
@@ -16,23 +14,19 @@ public class Company {
         this.projects = new ArrayList<>();
     }
 
-
     public void addEmployee(Employee employee) {
         if (!employees.contains(employee)) {
             employees.add(employee);
         }
     }
 
-
     public void removeEmployee(Employee employee) {
         employees.remove(employee);
     }
 
-
     public List<Employee> getEmployees() {
         return employees;
     }
-
 
     public void addProject(Project project) {
         if (!projects.contains(project)) {
@@ -40,21 +34,17 @@ public class Company {
         }
     }
 
-
     public void removeProject(Project project) {
         projects.remove(project);
     }
-
 
     public List<Project> getProjects() {
         return projects;
     }
 
-
     public String getName() {
         return name;
     }
-
 
     public void setName(String name) {
         this.name = name;
