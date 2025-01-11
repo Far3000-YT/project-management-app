@@ -1,17 +1,17 @@
 package base;
-import javafx.scene.layout.Priority;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import javafx.scene.layout.Priority;
 
 public class Task {
     private int id;
     private final String name;
     private final String description;
-    private Priority priority;
+    private Priority priority; //need to make enum priority class
     private Date dueDate;
-    private Status status; //need to define status enum here
+    private Status status; //need to define status enum here (the class)
     private Employee assignee;
     private List<String> comments;
 
@@ -61,8 +61,9 @@ public class Task {
     public void setAssignee (Employee assignee){
         this.assignee = assignee;
     }
+
     @Override
-    public String toString () {
+    public String toString() {
         return "Task{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
@@ -70,9 +71,8 @@ public class Task {
                 ", priority=" + priority +
                 ", dueDate=" + dueDate +
                 ", status=" + status +
-                ", assignee=" + (assignee != null ? assignee.getName() : "None") +
+                ", assignee=" + assignee +
                 ", comments=" + comments +
                 '}';
-
     }
 }
