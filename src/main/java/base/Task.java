@@ -62,8 +62,9 @@ public class Task {
     public void setAssignee (Employee assignee){
         this.assignee = assignee;
     }
+
     @Override
-    public String toString () {
+    public String toString() {
         return "Task{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
@@ -71,9 +72,8 @@ public class Task {
                 ", priority=" + priority +
                 ", dueDate=" + dueDate +
                 ", status=" + status +
-                ", assignee=" + (assignee != null ? assignee.getName() : "None") +
+                ", assignee=" + assignee +
                 ", comments=" + comments +
                 '}';
-
     }
 }
