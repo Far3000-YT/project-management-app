@@ -1,46 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controllers.PrimaryController">
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controllers.PrimaryController">
     <top>
         <MenuBar prefHeight="35.0">
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="menuLogout" mnemonicParsing="false" text="Logout"/>
-                        <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Exit"/>
+                        <MenuItem fx:id="menuLogout" mnemonicParsing="false" text="Logout" />
+                        <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Exit" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="View">
                     <items>
-                        <MenuItem fx:id="menuProjects" mnemonicParsing="false" text="Projects"/>
-                        <MenuItem fx:id="menuEmployees" mnemonicParsing="false" text="Employee"/>
+                        <MenuItem fx:id="menuProjects" mnemonicParsing="false" text="Projects" />
+                        <MenuItem fx:id="menuEmployees" mnemonicParsing="false" text="Employee" />
                     </items>
                 </Menu>
             </menus>
         </MenuBar>
     </top>
     <center>
-        <HBox spacing="10.0"  style="-fx-padding: 10; -fx-alignment: top-center;">
+        <HBox spacing="10.0" style="-fx-padding: 10; -fx-alignment: top-center;">
             <children>
                 <!-- Left Section: Personnel Management -->
-                <VBox spacing="10.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
+                <VBox prefWidth="300.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </padding>
-                    <Label text="Personnel Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
-                    <Button text="Create Employee" maxWidth="Infinity"/>
-                    <ListView prefHeight="200.0" prefWidth="150.0"/>
+                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Personnel Management" />
+                    <Button maxWidth="Infinity" text="Create Employee" />
+                    <ListView prefHeight="200.0" prefWidth="150.0" />
                     <VBox>
-                        <Label text="Employee Details"/>
-                        <Label text="Name"/>
-                        <Label text="ID"/>
-                        <Label text="Project History"/>
+                        <Label text="Employee Details" />
+                        <Label text="Name" />
+                        <Label text="ID" />
+                        <Label text="Project History" />
                         <ListView prefHeight="50.0" />
-                        <HBox spacing="5.0" alignment="CENTER_RIGHT">
+                        <HBox alignment="CENTER_RIGHT" spacing="5.0">
                             <Button text="Edit" />
                             <Button text="Delete" />
                         </HBox>
@@ -48,27 +58,27 @@
                 </VBox>
 
                 <!-- Middle Section: Project Management -->
-                <VBox spacing="10.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
+                <VBox prefWidth="300.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </padding>
-                    <Button text="Create Project" maxWidth="Infinity" />
-                    <Label text="Project Management" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
-                    <ListView prefHeight="200.0"  />
+                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Project Management" />
+                    <Button maxWidth="Infinity" text="Create Project" />
+                    <ListView prefHeight="200.0" />
                     <VBox>
                         <Label text="Project Details" />
-                        <Label text="Name"/>
-                        <Label text="ID"/>
-                        <Label text="Description"/>
+                        <Label text="Name" />
+                        <Label text="ID" />
+                        <Label text="Description" />
                         <TextArea prefHeight="50.0" />
-                        <Label text="Deadline"/>
+                        <Label text="Deadline" />
                         <Label text="Project Members" />
                         <ListView prefHeight="50.0" />
-                        <Button text="Add Member" maxWidth="Infinity"/>
+                        <Button maxWidth="Infinity" text="Add Member" />
                         <Label text="Tasks" />
-                        <ListView  prefHeight="50.0"/>
-                        <Button text="Add Task"  maxWidth="Infinity"/>
-                        <HBox spacing="5.0" alignment="CENTER_RIGHT">
+                        <ListView prefHeight="50.0" />
+                        <Button maxWidth="Infinity" text="Add Task" />
+                        <HBox alignment="CENTER_RIGHT" spacing="5.0">
                             <Button text="Edit" />
                             <Button text="Delete" />
                         </HBox>
@@ -76,34 +86,34 @@
                 </VBox>
 
                 <!-- Right Section: Project Monitoring -->
-                <VBox spacing="10.0" prefWidth="300.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
+                <VBox prefWidth="300.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </padding>
-                    <Label text="Project Monitoring" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Project Monitoring" />
                     <TabPane tabClosingPolicy="UNAVAILABLE">
                         <tabs>
-                            <Tab text="Kanban View" >
+                            <Tab text="Kanban View">
                                 <content>
                                     <HBox spacing="10.0">
-                                        <VBox style="-fx-border-color: lightgray; -fx-border-width: 1;"  alignment="TOP_CENTER" spacing="5.0" prefWidth="100">
-                                            <padding><Insets top="5.0" left="5.0" right="5.0" bottom="5.0" /></padding>
-                                            <Label text="To Do" style="-fx-font-weight: bold;" />
+                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="5.0" style="-fx-border-color: lightgray; -fx-border-width: 1;">
+                                            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+                                            <Label style="-fx-font-weight: bold;" text="To Do" />
                                         </VBox>
-                                        <VBox style="-fx-border-color: lightgray; -fx-border-width: 1;" alignment="TOP_CENTER" spacing="5.0" prefWidth="100">
-                                            <padding><Insets top="5.0" left="5.0" right="5.0" bottom="5.0" /></padding>
-                                            <Label text="In Progress" style="-fx-font-weight: bold;" />
+                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="5.0" style="-fx-border-color: lightgray; -fx-border-width: 1;">
+                                            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+                                            <Label style="-fx-font-weight: bold;" text="In Progress" />
                                         </VBox>
-                                        <VBox style="-fx-border-color: lightgray; -fx-border-width: 1;"  alignment="TOP_CENTER" spacing="5.0" prefWidth="100">
-                                            <padding><Insets top="5.0" left="5.0" right="5.0" bottom="5.0" /></padding>
-                                            <Label text="Done" style="-fx-font-weight: bold;" />
+                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="5.0" style="-fx-border-color: lightgray; -fx-border-width: 1;">
+                                            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+                                            <Label style="-fx-font-weight: bold;" text="Done" />
                                         </VBox>
                                     </HBox>
                                 </content>
                             </Tab>
                             <Tab text="Calendar View">
                                 <content>
-                                    <Label text="Calendar View"  alignment="CENTER"/>
+                                    <Label alignment="CENTER" text="Calendar View" />
                                 </content>
                             </Tab>
                         </tabs>
