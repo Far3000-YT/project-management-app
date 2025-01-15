@@ -42,7 +42,7 @@
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                     </padding>
                     <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Personnel Management" />
-                    <Button maxWidth="Infinity" text="Create Employee" />
+                    <Button maxWidth="Infinity" style="-fx-background-color: #34495E;" text="Create Employee" />
                     <ListView prefHeight="200.0" prefWidth="150.0" />
                     <VBox>
                         <Label text="Employee Details" />
