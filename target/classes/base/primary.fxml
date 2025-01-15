@@ -14,17 +14,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controllers.PrimaryController">
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controllers.PrimaryController" style="-fx-background-color: linear-gradient(to bottom, #fbe4ef, #f8d7e5);">
     <top>
-        <MenuBar prefHeight="35.0">
+        <MenuBar prefHeight="35.0" style="-fx-background-color: #d6a5b7; -fx-border-color: #c785a3;">
             <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="File" style="-fx-text-fill: white; -fx-font-family: 'Georgia'; -fx-font-weight: bold;">
                     <items>
                         <MenuItem fx:id="menuLogout" mnemonicParsing="false" text="Logout" />
                         <MenuItem fx:id="menuExit" mnemonicParsing="false" text="Exit" />
                     </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="View">
+                <Menu mnemonicParsing="false" text="View" style="-fx-text-fill: white; -fx-font-family: 'Georgia'; -fx-font-weight: bold;">
                     <items>
                         <MenuItem fx:id="menuProjects" mnemonicParsing="false" text="Projects" />
                         <MenuItem fx:id="menuEmployees" mnemonicParsing="false" text="Employee" />
@@ -34,78 +34,75 @@
         </MenuBar>
     </top>
     <center>
-        <HBox spacing="10.0" style="-fx-padding: 10; -fx-alignment: top-center;">
+        <HBox spacing="20.0" style="-fx-padding: 20; -fx-alignment: top-center;">
             <children>
                 <!-- Left Section: Personnel Management -->
-                <VBox prefWidth="300.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
+                <VBox prefWidth="300.0" spacing="15.0" style="-fx-border-width: 2; -fx-border-color: #c785a3; -fx-background-color: #ffffff; -fx-border-radius: 10; -fx-background-radius: 10;">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </padding>
-                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Personnel Management" />
-                    <Button maxWidth="Infinity" style="-fx-background-color: #34495E;" text="Create Employee" />
-                    <ListView prefHeight="200.0" prefWidth="150.0" />
-                    <VBox>
-                        <Label text="Employee Details" />
+                    <Label style="-fx-font-size: 16px; -fx-font-family: 'Georgia'; -fx-font-weight: bold; -fx-text-fill: #c785a3;" text="Personnel Management" />
+                    <Button maxWidth="Infinity" style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-font-family: 'Georgia'; -fx-font-weight: bold; -fx-border-radius: 10;" text="Create Employee" />
+                    <ListView prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: #fbe4ef; -fx-border-color: #c785a3; -fx-border-radius: 5;" />
+                    <VBox spacing="10.0" style="-fx-alignment: center;">
+                        <Label style="-fx-font-family: 'Georgia'; -fx-font-size: 14px; -fx-text-fill: #c785a3;" text="Employee Details" />
                         <Label text="Name" />
                         <Label text="ID" />
                         <Label text="Project History" />
-                        <ListView prefHeight="50.0" />
-                        <HBox alignment="CENTER_RIGHT" spacing="5.0">
-                            <Button text="Edit" />
-                            <Button text="Delete" />
+                        <ListView prefHeight="50.0" style="-fx-background-color: #fbe4ef; -fx-border-color: #c785a3; -fx-border-radius: 5;" />
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <Button style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-border-radius: 5;" text="Edit" />
+                            <Button style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-border-radius: 5;" text="Delete" />
                         </HBox>
                     </VBox>
                 </VBox>
 
                 <!-- Middle Section: Project Management -->
-                <VBox prefWidth="300.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
+                <VBox prefWidth="300.0" spacing="15.0" style="-fx-border-width: 2; -fx-border-color: #c785a3; -fx-background-color: #ffffff; -fx-border-radius: 10; -fx-background-radius: 10;">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </padding>
-                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Project Management" />
-                    <Button maxWidth="Infinity" text="Create Project" />
-                    <ListView prefHeight="200.0" />
-                    <VBox>
-                        <Label text="Project Details" />
+                    <Label style="-fx-font-size: 16px; -fx-font-family: 'Georgia'; -fx-font-weight: bold; -fx-text-fill: #c785a3;" text="Project Management" />
+                    <Button maxWidth="Infinity" style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-font-family: 'Georgia'; -fx-font-weight: bold; -fx-border-radius: 10;" text="Create Project" />
+                    <ListView prefHeight="200.0" style="-fx-background-color: #fbe4ef; -fx-border-color: #c785a3; -fx-border-radius: 5;" />
+                    <VBox spacing="10.0" style="-fx-alignment: center;">
+                        <Label text="Project Details" style="-fx-font-family: 'Georgia'; -fx-font-size: 14px; -fx-text-fill: #c785a3;" />
                         <Label text="Name" />
                         <Label text="ID" />
                         <Label text="Description" />
-                        <TextArea prefHeight="50.0" />
+                        <TextArea prefHeight="50.0" style="-fx-border-color: #c785a3; -fx-border-radius: 5; -fx-background-color: #fbe4ef; -fx-background-radius: 5;" />
                         <Label text="Deadline" />
                         <Label text="Project Members" />
-                        <ListView prefHeight="50.0" />
-                        <Button maxWidth="Infinity" text="Add Member" />
+                        <ListView prefHeight="50.0" style="-fx-background-color: #fbe4ef; -fx-border-color: #c785a3; -fx-border-radius: 5;" />
+                        <Button maxWidth="Infinity" text="Add Member" style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-font-family: 'Georgia'; -fx-border-radius: 10;" />
                         <Label text="Tasks" />
-                        <ListView prefHeight="50.0" />
-                        <Button maxWidth="Infinity" text="Add Task" />
-                        <HBox alignment="CENTER_RIGHT" spacing="5.0">
-                            <Button text="Edit" />
-                            <Button text="Delete" />
+                        <ListView prefHeight="50.0" style="-fx-background-color: #fbe4ef; -fx-border-color: #c785a3; -fx-border-radius: 5;" />
+                        <Button maxWidth="Infinity" text="Add Task" style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-font-family: 'Georgia'; -fx-border-radius: 10;" />
+                        <HBox alignment="CENTER" spacing="10.0">
+                            <Button style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-border-radius: 5;" text="Edit" />
+                            <Button style="-fx-background-color: #d6a5b7; -fx-text-fill: white; -fx-border-radius: 5;" text="Delete" />
                         </HBox>
                     </VBox>
                 </VBox>
 
                 <!-- Right Section: Project Monitoring -->
-                <VBox prefWidth="300.0" spacing="10.0" style="-fx-border-width: 1; -fx-border-color: lightgray;">
+                <VBox prefWidth="300.0" spacing="15.0" style="-fx-border-width: 2; -fx-border-color: #c785a3; -fx-background-color: #ffffff; -fx-border-radius: 10; -fx-background-radius: 10;">
                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                        <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                     </padding>
-                    <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Project Monitoring" />
-                    <TabPane tabClosingPolicy="UNAVAILABLE">
+                    <Label style="-fx-font-size: 16px; -fx-font-family: 'Georgia'; -fx-font-weight: bold; -fx-text-fill: #c785a3;" text="Project Monitoring" />
+                    <TabPane tabClosingPolicy="UNAVAILABLE" style="-fx-border-color: #c785a3;">
                         <tabs>
                             <Tab text="Kanban View">
                                 <content>
                                     <HBox spacing="10.0">
-                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="5.0" style="-fx-border-color: lightgray; -fx-border-width: 1;">
-                                            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="10.0" style="-fx-border-color: #c785a3; -fx-background-color: #fbe4ef; -fx-border-width: 1;">
                                             <Label style="-fx-font-weight: bold;" text="To Do" />
                                         </VBox>
-                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="5.0" style="-fx-border-color: lightgray; -fx-border-width: 1;">
-                                            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="10.0" style="-fx-border-color: #c785a3; -fx-background-color: #fbe4ef; -fx-border-width: 1;">
                                             <Label style="-fx-font-weight: bold;" text="In Progress" />
                                         </VBox>
-                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="5.0" style="-fx-border-color: lightgray; -fx-border-width: 1;">
-                                            <padding><Insets bottom="5.0" left="5.0" right="5.0" top="5.0" /></padding>
+                                        <VBox alignment="TOP_CENTER" prefWidth="100" spacing="10.0" style="-fx-border-color: #c785a3; -fx-background-color: #fbe4ef; -fx-border-width: 1;">
                                             <Label style="-fx-font-weight: bold;" text="Done" />
                                         </VBox>
                                     </HBox>
@@ -113,7 +110,7 @@
                             </Tab>
                             <Tab text="Calendar View">
                                 <content>
-                                    <Label alignment="CENTER" text="Calendar View" />
+                                    <Label alignment="CENTER" text="Calendar View" style="-fx-font-family: 'Georgia'; -fx-font-size: 14px;" />
                                 </content>
                             </Tab>
                         </tabs>
@@ -122,7 +119,4 @@
             </children>
         </HBox>
     </center>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
 </BorderPane>
