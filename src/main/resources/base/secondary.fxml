@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Controllers.SecondaryController">
    <top>
       <AnchorPane prefHeight="500.0" prefWidth="536.0" BorderPane.alignment="CENTER">
          <children>
@@ -22,14 +22,13 @@
             </ImageView>
             <TextField fx:id="usernameField" layoutX="298.0" layoutY="237.0" prefHeight="26.0" prefWidth="104.0" promptText="User Name" style="-fx-background-color: #34495E;" />
             <PasswordField fx:id="passwordField" layoutX="298.0" layoutY="269.0" prefHeight="26.0" prefWidth="104.0" promptText="Password" style="-fx-background-color: #34495E;" />
-            <Button fx:id="loginButton" layoutX="323.0" layoutY="357.0" mnemonicParsing="false" style="-fx-background-color: #34495E;" text="Login" textFill="WHITE">
+            <Button fx:id="loginButton" layoutX="324.0" layoutY="339.0" mnemonicParsing="false" onAction="#handleLoginButton" style="-fx-background-color: #34495E;" text="Login" textFill="WHITE">
                <font>
                   <Font name="Montserrat Bold" size="12.0" />
                </font></Button>
-            <Hyperlink fx:id="createAccount" graphicTextGap="2.0" layoutX="291.0" layoutY="395.0" text="Create an account" textFill="#34495e" />
+            <Hyperlink fx:id="createAccount" graphicTextGap="2.0" layoutX="291.0" layoutY="395.0" onAction="#handleCreateAccount" text="Create an account" textFill="#34495e" />
             <Text layoutX="172.0" layoutY="181.0" strokeType="OUTSIDE" strokeWidth="0.0" />
             <Text layoutX="318.0" layoutY="180.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" />
-            <Hyperlink fx:id="passwordReset" graphicTextGap="2.0" layoutX="277.0" layoutY="420.0" text="Forgot your Password ?" textFill="#34495e" />
          </children></AnchorPane>
    </top>
 </BorderPane>

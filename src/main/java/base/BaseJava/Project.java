@@ -1,10 +1,10 @@
-package base;
+package base.BaseJava;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.HashMap;
-import java.util.ArrayList;
 
 public class Project {
     private final int id;
@@ -21,7 +21,6 @@ public class Project {
         this.deadline = deadline;
         this.members = new HashMap<>();
         this.tasks = new ArrayList<>();
-
     }
 
     public int getId() {

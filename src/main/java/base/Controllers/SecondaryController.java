@@ -1,6 +1,7 @@
-package base;
+package base.Controllers;
 
 import java.io.IOException;
+import java.net.URL;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,9 +15,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
 public class SecondaryController {
-
     @FXML
     private TextField usernameField;
     @FXML
@@ -24,20 +23,23 @@ public class SecondaryController {
 
     @FXML
     private Button loginButton;
-
     @FXML
     private Hyperlink createAccount;
-    @FXML
-    private Hyperlink passwordReset;
-
 
     @FXML
     private void handleLoginButton(ActionEvent event) throws IOException {
         String username = usernameField.getText();
         String password = passwordField.getText();
+        System.out.println("Username: " + username + " Password: " + password);
 
-        System.out.println("Username: "+ username + " Password: "+ password);
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("primary.fxml"));
+        URL fxmlLocation = getClass().getResource("/base/primary.fxml");
+        if (fxmlLocation == null) {
+            System.err.println("Error: Could not find primary.fxml");
+            // Handle the error appropriately (e.g., show an error message to the user)
+            return;
+        }
+
+        FXMLLoader loader = new FXMLLoader(fxmlLocation);
         Parent root = loader.load();
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -48,17 +50,19 @@ public class SecondaryController {
 
     @FXML
     private void handleCreateAccount(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("third.fxml"));
+        URL fxmlLocation = getClass().getResource("/base/third.fxml");
+        if (fxmlLocation == null) {
+            System.err.println("Error: Could not find third.fxml");
+            // Handle the error appropriately (e.g., show an error message to the user)
+            return;
+        }
+
+        FXMLLoader loader = new FXMLLoader(fxmlLocation);
         Parent root = loader.load();
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-
-    @FXML
-    private void handlePasswordReset(ActionEvent event) {
-        //Do Nothing for now
     }
 }
