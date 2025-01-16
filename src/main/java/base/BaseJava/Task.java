@@ -1,21 +1,29 @@
 package base.BaseJava;
+
+import java.sql.Date;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-import javafx.scene.layout.Priority;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Task {
     private int id;
-    private final String name;
-    private final String description;
-    private Priority priority; //need to make enum priority class
+    private String name;
+    private String description;
+    private String priority;
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date dueDate;
-    private Status status; //need to define status enum here (the class)
+    private String status;
     private Employee assignee;
     private List<String> comments;
 
-    public Task(int id, String name, String description, Priority priority, Date dueDate, Status status, Employee assignee) {
+    public Task() {
+        this.comments = new ArrayList<>();
+    }
+
+    public Task(int id, String name, String description, String priority, Date dueDate, String status, Employee assignee) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -26,53 +34,78 @@ public class Task {
         this.comments = new ArrayList<>();
     }
 
-    public int getId () {
+    // Getters and setters
+
+    public int getId() {
         return id;
     }
 
-    public String getName () {
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
         return name;
     }
-    public String getDescription () {
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
         return description;
     }
 
-    public Priority getPriority () {
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getPriority() {
         return priority;
     }
-    public Date getDueDate () {
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
+     public Date getDueDate() {
         return dueDate;
     }
 
-    public Status getStatus () {
+    public void setDueDate(Date dueDate) {
+        this.dueDate = dueDate;
+    }
+
+    public String getStatus() {
         return status;
     }
 
-    public Employee getAssignee () {
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Employee getAssignee() {
         return assignee;
     }
 
-    public List<String> getComments () {
+    public void setAssignee(Employee assignee) {
+        this.assignee = assignee;
+    }
+
+    public List<String> getComments() {
         return comments;
     }
-    public void setStatus (Status status){
-        this.status = status;
+
+    public void setComments(List<String> comments) {
+        this.comments = comments;
     }
-    public void setAssignee (Employee assignee){
-        this.assignee = assignee;
+
+    public void addComment(String comment) {
+        comments.add(comment);
     }
 
     @Override
     public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", priority=" + priority +
-                ", dueDate=" + dueDate +
-                ", status=" + status +
-                ", assignee=" + assignee +
-                ", comments=" + comments +
-                '}';
+        return name;
     }
 }
