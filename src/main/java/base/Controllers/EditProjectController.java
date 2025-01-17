@@ -69,8 +69,6 @@ public class EditProjectController implements Initializable {
         try {
             // Convert LocalDate to java.sql.Date before updating
             Date sqlDeadline = Date.valueOf(deadline);
-            
-            // Members from the project to send as parameters
             HashMap<String, String> members = new HashMap<>(project.getMembers());
 
              Project updatedProject = apiService.updateProject(project.getId(), projectName, description, deadline, priority, members);
@@ -81,7 +79,7 @@ public class EditProjectController implements Initializable {
              } else {
                 showAlert("Error", "Failed to update project.", Alert.AlertType.ERROR);
              }
-         } catch (IOException | URISyntaxException | ParseException e) {
+        } catch (IOException | URISyntaxException | ParseException e) {
             showAlert("Error", "Failed to update project.", Alert.AlertType.ERROR);
         }
     }
